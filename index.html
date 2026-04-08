@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frida Torres X455 Website Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- link to awesome font css, so we can use different icons on our website -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- W3 CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- begin: add jquery script links to support for sortable table -->
+    <!-- jquery.min.js should be loaded before jquery.tablesorter.min.js because tablesorter requires basice jquery -->
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+    <!-- end: add jquery script links to support for sortable table -->
+
+ <!-- CSS -->
+  <style>
+.float-left {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+  .no-float {
+    float: none;
+  }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+div.scroll {
+  background-color: gainsboro;
+  height: 360px;
+  overflow: scroll;
+}
+table, th, td {
+  border:3px solid black;
+}
+
+    </style>
+ </head>
+
+<body>
+
+  <div class="w3-container"></div>
+
+    <!-- Navigation Bar-->
+   <div class="w3-bar w3-light-grey">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">About Me</a>
+  <a href="#" class="w3-bar-item w3-button">Destinations</a>
+  <a href="#" class="w3-bar-item w3-button">Gallery</a>
+  <a href="#" class="w3-bar-item w3-button">Vlogs</a>
+  <a href="#" class="w3-bar-item w3-button">Travel Tips</a>
+</div>
+
+<!-- First Parge Image with Logo Text -->
+<div class="w3-display-container">
+  <img src="https://www.visitcentroamerica.com/wp-content/uploads/2025/04/Tikal-National-Park-Aerial-View-Guatemala-Centroamerica-01.webp" alt="Tikal Temple" class="w3-opacity" style="width:100%">
+<div class="w3-padding w3-display-middle">Pavlova Travels</div>
+</div>
+
+
+<!-- page 2 (About Me) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">About Me</h3>
+
+   <!-- First paragraph with left image -->
+     <div class="clearfix">
+    <img src="https://55pluslife-media.nyc3.digitaloceanspaces.com/wp-content/uploads/2023/12/29135912/soloTravel_BLOG-HERO-scaled-e1702937804861.jpg"
+         class="float-left"
+         alt="Photo of Me"
+         width="300">
+  
+         <p>Travel started as a way for me to step outside of my routine, but it quickly became something much more intentional. What began as short trips and weekend escapes turned into a deeper curiosity about the world — the way people live, the stories behind places, and the small details that often go unnoticed. I’ve always been drawn to visual storytelling, which is why I document my experiences through both photography and video, using tools like Adobe Lightroom to shape the way these moments are shared. Each destination I visit becomes part of a larger narrative, one that reflects not just where I’ve been, but how those places have influenced the way I see and move through the world.</p>
+    </div>
+   
+      <!-- Second paragraph with right image -->
+     <div class="clearfix">
+    <img src="https://images.squarespace-cdn.com/content/v1/5cec1179fdcda30001c7c690/41c9cd41-7e00-4c7d-93b7-d76cb1d785c2/Womens-Solo-Travel-Rachel-Jean-Rachel-Off-Duty-Her-Bags-Were-Packed.jpg"
+         class="float-right"
+         alt="Photo of Travel"
+         width="300">
+
+      <p>This site is a collection of those experiences — a space where travel is both documented and reflected on. Beyond the visuals, I focus on creating content that feels honest and immersive, whether that’s through vlogs, curated destination pages, or thoughtful travel insights. I often draw inspiration from platforms like YouTube, where storytelling goes beyond aesthetics and captures the full experience of being somewhere new. My goal is not just to share where I go, but to create a sense of connection to each place — to highlight moments that feel real, unfiltered, and meaningful. Through this work, I hope to encourage a more intentional approach to travel, one that values presence, curiosity, and perspective over simply checking destinations off a list.</p>
+    </div>
+</div>
+
+<!-- Page 3 (Destinations) -->
+  <h3 class="w3-center">Destinations</h3>
+ <!-- Carousel -->
+<div id="demo" class="carousel slide float-left" data-bs-ride="carousel" style="width: 50%; margin-right: 50px;">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.cahalpech.com/wp-content/uploads-old/2016/01/Tikal-1.jpg" alt="Temple 1" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://boletos.culturaguate.gob.gt/wp-content/uploads/2025/12/Tikal-777x570-1.jpg" alt="Tikal Park" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://uncoveredhistory.com/images/W0831-Tikal-Temple-of-Skulls1.jpg" alt="Temple Steps" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <!-- Scrollable Text Overflow-->
+<div class="scroll">My visit to Tikal was one of the most immersive and visually striking travel experiences I’ve had. Located deep within the dense rainforest of northern Guatemala, the site is surrounded by an expansive jungle ecosystem where ancient stone structures emerge unexpectedly above the treetops. The journey into the park itself already feels like a transition into another world — the roads narrow, the air becomes more humid, and the sounds of wildlife gradually replace the noise of modern life.
+
+As I explored the site, I moved between massive ceremonial complexes, open plazas, and long stone pathways that once connected one of the most powerful cities of the ancient Maya civilization. The scale of the architecture is difficult to fully grasp until you are physically there, standing at the base of towering temples that rise far above the canopy. Climbing some of the structures offered panoramic views of uninterrupted green jungle stretching endlessly in every direction, with only the tops of other pyramids visible in the distance.
+
+One of the most memorable aspects of the experience was the atmosphere created by the surrounding environment. Early in the morning, a layer of mist often settles over the forest, softening the landscape and giving the ruins a quiet, almost cinematic quality. The soundscape is equally powerful — howler monkeys echo through the trees, birds move overhead in bursts of color and motion, and the rustling of leaves constantly reminds you that the site is still very much alive within its natural setting.
+
+Unlike traditional museums or preserved historical sites, Tikal does not feel separated from its environment. Instead, it exists as part of it. Roots grow around stonework, pathways wind through dense vegetation, and the jungle continuously reclaims and surrounds the architecture. This blending of nature and history creates a sense of timelessness that is difficult to replicate elsewhere. Walking through the site felt both grounding and reflective, offering moments of stillness that contrasted with the physical scale and complexity of the ruins.
+
+What stayed with me most was not just the visual impact of the temples, but the feeling of being in a place where history, nature, and time are deeply intertwined. It is a destination that encourages you to slow down, observe closely, and appreciate the layers of life that exist within a single landscape.</div>
+
+<!-- Page 4 (Travel Tips) -->
+  <div class="w3-container w3-padding-64" id="Travel-Tips">
+        <div class="w3-padding-large">
+ <h3 class="w3-center">Travel Tips</h3>
+ <h5>How to use this table</h5>
+ <p> This table outlines the primary tools I use when planning trips. You can sort by category, cost, or purpose to quickly find the resource that fits your travel needs. These tools help streamline flight searches, accommodations, budgeting, and itinerary organization.</p>
+
+  <!-- add sortable table begin -->
+          <!-- step 2: create a table with 4 columns -->
+          <!-- step 3: add jquery links inside the <head> tag above to support sortability -->
+          <!-- step 4: add javascript in <script> tag below to sort in in ascending/descending order -->
+
+  <!-- Table-->
+ <table id="myTable" style="width:100%">
+  <thead>
+  <tr>
+    <th>Tool Name</th>
+    <th>Category</th>
+    <th>Best For</th>
+    <th>Cost</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td>Google Flights</td>
+    <td>Flight Search</td>
+    <td>Comparing airfare prices</td>
+    <td>Free</td>
+  </tr>
+  <tr>
+    <td>Skyscanner</td>
+    <td>Flight Search</td>
+    <td>Flexible date searches</td>
+    <td>Free</td>
+  </tr>
+  <tr>
+    <td>Airbnb</td>
+    <td>Accommodation</td>
+    <td>Unique stays & apartments</td>
+    <td>Varies</td>
+  </tr>
+  <tr>
+    <td>Booking.com</td>
+    <td>Accommodation</td>
+    <td>Hotels & last-minute bookings</td>
+    <td>Varies</td>
+  </tr>
+  </tbody>
+</table>
+ </div>
+</div>
+
+<!-- more id section -->
+      <!-- Vlogs Page -->
+      <div class="w3-container w3-padding-64" id="vlogs">
+        <div class="w3-padding-large">
+          <h3 class="w3-center">Vlogs</h3>
+           <!-- add youtube video begin -->
+          <!-- step 1: use w3-row and w3-col classes to allocated spaces for youtube videos -->
+          <!--    source: https://www.w3schools.com/w3css/w3css_responsive.asp -->
+          <!-- step 2: browser to https://www.youtube.com/ and search for videos -->
+          <!-- step 3: look for the youtube video embedded code and copy the code snippet -->
+          <!-- step 4: paste the code snippet in the space created with w3-row and w3-col classes -->
+
+          <div class="w3-row">
+            <!-- create 1st column -->
+            <div class="w3-col m6 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe  
+              width="95%"
+              height="300" 
+              src="https://www.youtube.com/embed/PGbVPTqYD3E" 
+              title="Is Guatemala Better Than Mexico? Flores & Tikal" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              >
+              </iframe>
+            </div>
+
+<!-- create 2nd column -->
+            <div class="w3-col m6 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe 
+              width="95%"
+              height="300" 
+              src="https://www.youtube.com/embed/Czyxp-bCoU0" 
+              title="TIKAL NATIONAL PARK | Guatemala Travel Vlog" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              >
+            </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Footer -->
+ <div class="clearfix"></div>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>2026 Pavlova Travels. All Rights Reserved </p>
+</footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--  // sortable table begin -->
+  <script>
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          cssAsc: "tablesorter-headerAsc",
+          cssDesc: "tablesorter-headerDesc",
+        });
+      });
+</script>
+ <!--  // sortable table end -->
+
+</body>
+</html>
